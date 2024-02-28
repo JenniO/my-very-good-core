@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "home": "Home",
+    "colors": "Farben",
+    "dealer": "Händler",
+    "menu": "Menü"
+  },
+  "main": {
+    "catalogue": "Katalog"
+  },
+  "onboarding": {
+    "skip": "Überspringen",
+    "continue": "Weiter",
+    "lets_go": "Los geht's"
+  },
+
+  "error": {
+    "error": "Fehler {error}",
+    "general": "Ups! Da lief was schief. Versuche es später erneut",
+    "login_failed": "Login ist fehlgeschlagen",
+    "server_error": "Ein Server-Fehler ist aufgetreten.",
+    "server_timeout": "Timeout-Fehler ist aufgetreten.",
+    "server_unavailable": "Der Server ist gerade nicht verfügbar.",
+    "no_internet_connection": "Keine Verbindung zum Internet. Bitte überprüfe deine Verbindung."
+  }
+}

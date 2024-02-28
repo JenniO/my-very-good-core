@@ -1,0 +1,29 @@
+#include: package:very_good_analysis/analysis_options.5.1.0.yaml
+linter:
+  rules:
+    always_declare_return_types: true
+    eol_at_end_of_file: true
+    lines_longer_than_80_chars: true
+    require_trailing_commas: true
+    always_use_package_imports: true
+    directives_ordering: true
+    prefer_single_quotes: true
+    always_put_required_named_parameters_first: true
+    sort_pub_dependencies: true
+    cancel_subscriptions: true
+    no_literal_bool_comparisons: true
+    prefer_conditional_assignment: true
+    prefer_final_in_for_each: true
+    unawaited_futures: true
+    use_colored_box: true
+    use_decorated_box: true
+    use_full_hex_values_for_flutter_colors: true
+    avoid_print: true
+
+analyzer:
+  errors:
+    invalid_annotation_target: ignore
+  exclude:
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
+    - 'bricks/**'

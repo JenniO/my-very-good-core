@@ -1,0 +1,36 @@
+image: docker:dind
+
+stages:
+  - analyze
+  - build
+
+analyze:
+  image: ghcr.io/cirruslabs/flutter:3.13.4
+  stage: analyze
+  tags: [dind]
+  script:
+    - flutter analyze
+
+unit-test:
+  image: ghcr.io/cirruslabs/flutter:3.13.4
+  stage: analyze
+  tags: [dind]
+  needs: [build-android-dev]
+  script:
+    - flutter test
+
+build-android-dev:
+  image: ghcr.io/cirruslabs/flutter:3.13.4
+  stage: build
+  tags: [dind]
+  needs: [analyze, unit-test]
+  script:
+    - flutter build apk --build-number=$CI_PIPELINE_IID -t lib/main_dev.dart --flavor development
+    - mv build/app/outputs/flutter-apk/app-development-release.apk develop.apk
+  artifacts:
+    paths:
+      - develop.apk
+    expire_in: 2 week
+    expose_as: 'Android APK'
+    name: $CI_COMMIT_REF_SLUG
+

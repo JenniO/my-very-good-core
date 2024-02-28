@@ -1,0 +1,74 @@
+name: {{project_name.snakeCase()}}
+description: {{{description}}}
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.1.0 <4.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  cupertino_icons: ^1.0.6
+  dio: ^5.4.1
+  easy_localization: ^3.0.4
+  equatable: ^2.0.5
+  floor: ^1.4.2
+
+  flutter:
+    sdk: flutter
+
+  flutter_bloc: ^8.1.4
+  flutter_native_splash: ^2.3.13
+  formz: ^0.7.0
+  freezed_annotation: ^2.4.1
+  go_router: ^13.2.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  json_annotation: ^4.8.1
+  pretty_dio_logger: ^1.3.1
+  retrofit: ^4.1.0
+  shared_preferences: ^2.2.2
+  sqflite: ^2.3.2
+
+dev_dependencies:
+  bloc_test: ^9.1.6
+  build_runner: '>2.3.0 <4.0.0'
+  floor_generator: ^1.4.2
+  # generates variables for assets, so we don't habe to use string for images, font families,
+  # colors,...
+  flutter_gen_runner: ^5.4.0
+  flutter_lints: ^3.0.1
+#  flutter_test:
+#    sdk: flutter
+  freezed: ^2.4.7
+  hive_generator: ^2.0.1
+  json_serializable: ^6.7.1
+  mocktail: ^1.0.3
+  retrofit_generator: ^8.1.0
+
+# configuration for flutter gen
+flutter_gen:
+  output: lib/assets
+  integrations:
+    flutter_svg: true
+  colors:
+    inputs:
+      - assets/color/colors_light.xml
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/translations/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
