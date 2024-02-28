@@ -1,4 +1,4 @@
-# Very Good 28Apps Core
+# My Very Good Core
 
 ## Getting Started 🚀
 
@@ -20,7 +20,7 @@ $ mason init
 ### 📦 Add a new brick to the mason.yaml
 ```yaml
 mason add widget
-  --git-url https://gitlab.28apps-software.de/28apps_templates/mobile/flutter/very-good-28apps-core
+  --git-url https://github.com/JenniO/my-very-good-core
   --git-path brick
   --git-ref master
 ```
@@ -34,7 +34,7 @@ $ mason list
 ```
 ### 🚧 Generate code from a brick
 ```sh
-$ mason make very_good_28apps_core
+$ mason make my_very_good_core
 ```
 The brick will then ask you a few questions and will use the answers to 
 create a new project.
